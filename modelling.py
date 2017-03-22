@@ -1,5 +1,4 @@
 import numpy as np
-#import matplotlib.pylab as plt
 import random
 '''
 f = open("random_numbers.txt","w+")
@@ -42,7 +41,6 @@ for i in range(1,20):
 	idle_time[i] = arrival_time[i] - service_end[i-1]
 
 
-print idle_time
 avg_wait = sum(waiting_time)/20.0
 
 print "Customer\tInter Arrival Time\tArrival Time\tService Time\tService Begins\tService Ends\tWait Time"
