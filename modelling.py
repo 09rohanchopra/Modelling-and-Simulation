@@ -1,12 +1,17 @@
 import numpy as np
 import time
 import random
-n = input("Enter the value of n : ")
-customers=input("Enter the number of customers : ")
-time_duration,time_increment = (int(x) for x in raw_input("Enter the time duration & increment step(separate by space) : ").split(" "))
-print '\n\n'
 
-print 'S No.'+'\t'+'Iterations'+'\t'+'Duration'+'\t'+'AAWT'
+
+n = int(input("Enter the value of n : "))
+
+customers=int(input("Enter the number of customers : "))
+
+time_duration,time_increment = (int(x) for x in input("Enter the time duration & increment step(separate by space) : ").split(" "))
+
+print ('\n\n')
+
+print ('S No.'+'\t'+'Iterations'+'\t'+'Duration'+'\t'+'AAWT')
 
 for k in range(n):
 	average_awt=0
@@ -82,6 +87,6 @@ for k in range(n):
 		#print 'Total idle time :\t' + str(sum(idle_time))
 
 
-	print str(k)+'\t\t'+str(iterations)+'\t\t'+str(time_duration)+'\t\t'+"{0:.2f}".format(average_awt/iterations)
+	print (str(k)+'\t\t'+str(iterations)+'\t\t'+str(time_duration)+'\t\t'+"{0:.2f}".format(average_awt/iterations))
 	#print inter_arrival_time
 	#print service_time
