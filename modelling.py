@@ -1,7 +1,9 @@
 import numpy as np
 import time
 import random
+from randomnum import RandNum
 
+r = RandNum()
 
 n = int(input("Enter the value of n : "))
 
@@ -29,8 +31,10 @@ for k in range(n):
 
 		#_____ to generate the random numbers__________#
 		for i in range(customers):
-			inter_arrival_time.append(random.randint(1,8))
-			service_time.append(random.randint(1,6))
+			#inter_arrival_time.append(random.randint(1,8))
+			#service_time.append(random.randint(1,6))
+			inter_arrival_time.append(r.randint1(1,8))
+			service_time.append(r.randint1(1,6))
 
 		#print inter_arrival_time,service_time
 
