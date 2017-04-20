@@ -25,19 +25,7 @@ class RandNum:
 		rand = rand% self.m
 		return float(rand/self.m)
 
-	def randint(self,s,e):
-		r = self.linCong()
-		r = ((r*(e-s)) + s)
-		return int(r)
-			
-	def randint1(self,s,e):
-		while(True):
-			self.seed = int(round(time.time() % 10))
-			r = self.linCong()
-			r = r*10
-			r = int(r)
-			if(r>s and r<e):
-				return r
+	
 	def setComSeed(self,s1,s2):
 		self.t1 = s1
 		self.t2 = s2
