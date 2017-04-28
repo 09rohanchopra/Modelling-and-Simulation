@@ -1,5 +1,5 @@
 import time
-import xlsxwriter
+#import xlsxwriter
 import random
 
 
@@ -7,8 +7,8 @@ class RandNum:
 	a = 16807
 	c = 0
 	m = 2147483647
-	t1 = 0
-	t2 = 0	
+	t1 = 0.0
+	t2 = 0.0
 
 	def __init__(self):
 		self.seed = int(round(time.time() * 1000))
@@ -27,17 +27,17 @@ class RandNum:
 
 	
 	def setComSeed(self,s1,s2):
-		self.t1 = s1
-		self.t2 = s2
+		self.t1 = float(s1)
+		self.t2 = float(s2)
 
 	def comcong(self):
 		
-		a1 = 40014
-		a2 = 40692
-		m1 = 2147483563
-		m2 = 2147483399
+		a1 = 40014.0
+		a2 = 40692.0
+		m1 = 2147483563.0
+		m2 = 2147483399.0
 
-		m = 2147483562
+		m = 2147483562.0
 
 		x1 = (a1*self.t1)%m1
 		x2 = (a2*self.t2)%m2
@@ -50,7 +50,7 @@ class RandNum:
 			r = (m/m1)
 		else:
 			r = x/m1
-		return r
+		return float(r)
 	def storeRand(self,num):
 		random.seed(self.t1)
 		uniques = []

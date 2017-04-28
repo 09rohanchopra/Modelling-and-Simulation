@@ -2,6 +2,9 @@ import numpy as np
 import time
 import csv
 import random
+from randomnum import RandNum
+
+ur = RandNum()
 
 inputfile = open('input.csv','rb')
 reader = csv.DictReader(inputfile, delimiter=',')
@@ -21,8 +24,53 @@ for line in reader:
 		service_time=[]
 		#_____ to generate the random numbers_________#
 		for i in range(customers):
-			inter_arrival_time.append(random.randint(1,8))
-			service_time.append(random.randint(1,6))
+
+			#r = random.random()
+
+			#user defined random number
+			r = ur.comcong()
+
+			if r >= 0 and r < 0.125:
+				inter_arrival_time.append(1)
+			elif r >= 0.125 and r < 0.25:
+				inter_arrival_time.append(2)
+			elif r >= 0.25 and r < 0.375:
+				inter_arrival_time.append(3)
+			elif r >= 0.375 and r < 0.5:
+				inter_arrival_time.append(4)
+			elif r >= 0.5 and r < 0.625:
+				inter_arrival_time.append(5)
+			elif r >= 0.625 and r < 0.75:
+				inter_arrival_time.append(6)
+			elif r >= 0.75 and r < 0.875:
+				inter_arrival_time.append(7)
+			elif r >= 0.875 and r < 1:
+				inter_arrival_time.append(8)
+
+			#r = random.random()
+
+			#user defined random number
+			r = ur.comcong()
+
+			if r >= 0 and r < 0.16:
+				service_time.append(1)
+			elif r >= 0.16 and r < 0.33:
+				service_time.append(2)
+			elif r >= 0.33 and r < 0.5:
+				service_time.append(3)
+			elif r >= 0.5 and r < 0.66:
+				service_time.append(4)
+			elif r >= 0.66 and r < 0.83:
+				service_time.append(5)
+			elif r >= 0.83 and r < 1:
+				service_time.append(6)
+			
+
+			#Incorrect generation
+			#inter_arrival_time.append(random.randint(1,8))
+			#service_time.append(random.randint(1,6))
+
+
 		#print inter_arrival_time,service_time
 		arrival_time = np.cumsum(inter_arrival_time)		#find the cumulative sum
 		waiting_time = []
