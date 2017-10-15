@@ -6,9 +6,9 @@ from randomnum import RandNum
 
 ur = RandNum()
 
-inputfile = open('input.csv','rb')
+inputfile = open('input.csv','r')
 reader = csv.DictReader(inputfile, delimiter=',')
-outputfile = open('output.csv','wb')
+outputfile = open('output.csv','w')
 spamwriter = csv.writer(outputfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 
 spamwriter.writerow(['S.No.'] + ['Customers'] + ['Iterations'] + ['AAWT'])
