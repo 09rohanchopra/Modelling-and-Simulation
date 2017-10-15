@@ -1,5 +1,5 @@
 import time
-#import xlsxwriter
+import xlsxwriter
 import random
 
 
@@ -54,7 +54,7 @@ class RandNum:
 	def storeRand(self,num):
 		random.seed(self.t1)
 		uniques = []
-		workbook = xlsxwriter.Workbook('RandNum.xlsx')
+		workbook = xlsxwriter.Workbook('data/RandNum.xlsx')
 		worksheet = workbook.add_worksheet()
 		row = 0
 		col = 0		    

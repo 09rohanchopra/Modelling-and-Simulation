@@ -8,7 +8,7 @@ ur = RandNum()
 
 def poisson(alpha = 3.64):
 	
-	workbook = xlsxwriter.Workbook('poisson-rvar.xlsx')
+	workbook = xlsxwriter.Workbook('data/poisson-rvar.xlsx')
 	worksheet = workbook.add_worksheet()
 	row = 0
 	col = 0	
