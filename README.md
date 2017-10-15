@@ -20,7 +20,7 @@ Plot of user defined random numbers
 
 Plot of python's inbuilt random generator
 
-![Inbuilt](/plots/images/inbuilt-graph.png)
+![Inbuilt](/plots/inbuilt-graph.png)
 
 ### Files
 
